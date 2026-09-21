@@ -108,18 +108,6 @@ python -m autogen_mas --config config/paper.yaml run-adversarial-dataset \
 
 To use a different model without editing the configuration, add `--llm-provider`, `--llm-model`, and, when needed, `--normal-agent-model` and `--adversarial-model`.
 
-## Data
-
-The repository includes only the evaluation material required by the paper, not complete upstream training corpora. See [data/README.md](data/README.md) for file hashes, provenance, licenses, and citations. In summary:
-
-| Dataset | Released examples | Upstream license |
-| --- | ---: | --- |
-| MedMCQA | 4,183 | MIT |
-| MMLU | 1,602 across 7 subject files | MIT |
-| SCALR / LegalBench | 571 | CC BY 4.0 |
-| TruthfulQA | 817 | Apache-2.0 |
-| RAAC reasoning bank | 803 | Project-generated artifact; see data notice |
-
 ## Ethical-use note
 
 This artifact studies how a malicious participant can influence peer agents in a controlled evaluation setting. It is released for reproducibility, auditing, and defensive research. Do not deploy the attack components against systems or users without authorization.
