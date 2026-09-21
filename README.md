@@ -87,16 +87,6 @@ Replace `truthfulqa` with `medmcqa`, `mmlu`, or `scalr`. Results are written und
 python -m autogen_mas evaluate --run-path runs/<run-id>
 ```
 
-The paper used 100 questions per dataset, three rounds, four agents, and three independent runs per setting on the same question set. For example:
-
-```bash
-python -m autogen_mas --config config/paper.yaml run-adversarial-dataset \
-  --dataset mmlu --limit 100 --seed "$SEED" --skip-corpus-questions \
-  --attack-strategy 13
-```
-
-To use a different model without editing the configuration, add `--llm-provider`, `--llm-model`, and, when needed, `--normal-agent-model` and `--adversarial-model`.
-
 ## Ethical-use note
 
 This artifact studies how a malicious participant can influence peer agents in a controlled evaluation setting. It is released for reproducibility, auditing, and defensive research. Do not deploy the attack components against systems or users without authorization.
