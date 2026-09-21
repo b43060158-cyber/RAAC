@@ -8,8 +8,6 @@ The artifact supports three paper settings:
 - **RAAC (Strategy 13)**: one adversarial agent uses retrieval-augmented, target-specific persuasion.
 - **MCA (Baseline 1)**: the comparison attack without the RAAC retrieval strategy.
 
-The original development workspace is not required. Generated runs, caches, private environment files, intermediate analyses, and unrelated datasets are intentionally excluded.
-
 ## Repository layout
 
 ```text
