@@ -56,7 +56,7 @@ Run these commands from the repository root. Start with a small limit because a 
 export SEED=12345
 ```
 
-`--skip-corpus-questions` removes the questions that the released reasoning bank lists as source questions (matched by question key) before sampling, which keeps the evaluated questions separate from the bank. Use it for all runs, including Clean MAS, so that all settings are evaluated on the same questions.
+`--skip-corpus-questions` removes the questions that the released reasoning bank lists as source questions (matched by question key) before sampling, which keeps the evaluated questions separate from the bank.
 
 Clean MAS:
 
