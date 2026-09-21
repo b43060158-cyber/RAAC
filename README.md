@@ -46,17 +46,6 @@ LLM_BASE_URL=http://127.0.0.1:11434/v1
 LLM_CLIENT_BACKEND=direct_http
 ```
 
-## Offline verification
-
-These checks do not call an LLM API:
-
-```bash
-python scripts/validate_artifact.py
-python -m pytest -q tests/unit
-```
-
-The validator checks every released dataset file by SHA-256, loads all four datasets through the public adapters, and validates the reasoning-bank record count.
-
 ## Quick start
 
 Run these commands from the repository root. Start with a small limit because a full four-agent, three-round experiment makes many model calls.
