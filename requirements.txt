@@ -1,0 +1,10 @@
+PyYAML
+tqdm
+pytest
+
+# Optional AutoGen backend used when MAS_LLM_CLIENT=autogen or auto.
+autogen-core
+autogen-ext[openai]
+
+# Optional: only needed for scripts/plot_accuracy_comparison.py
+matplotlib

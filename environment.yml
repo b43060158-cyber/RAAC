@@ -1,0 +1,13 @@
+name: autogen-mas
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pyyaml
+  - tqdm
+  - pytest
+  - pip:
+      - -e .
+      - autogen-core
+      - autogen-ext[openai]

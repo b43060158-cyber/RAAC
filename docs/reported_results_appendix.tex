@@ -1,0 +1,90 @@
+% ACM appendix fragment: Clean MAS vs. RAAC (strategy 13) vs. MCA (baseline-1).
+% Required by acmart/booktabs: \toprule, \midrule, \bottomrule.
+% Required in the document preamble: \usepackage{float}
+% The [H] placement specifier keeps each table at its exact source position.
+% Paper-facing model label requested by the authors. The corresponding run
+% manifests currently record the provider/model as deepseek/deepseek-chat.
+\providecommand{\DeepSeekModelName}{DeepSeekV4-Flash}
+\providecommand{\QwenModelName}{Qwen3.5-Flash}
+
+\begin{table}[H]
+  \caption{Mean accuracy (\%) across three independent runs under the
+  \DeepSeekModelName{} backbone.}
+  \label{tab:appendix-deepseek-clean-raac-mca}
+  \centering
+  \footnotesize
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}lcccc@{}}
+    \toprule
+    Setting & MedMCQA & TruthfulQA & MMLU & SCALR \\
+    \midrule
+    Clean MAS
+      & $\mathbf{69.66}$
+      & $\mathbf{91.66}$
+      & $\mathbf{71.66}$
+      & $\mathbf{79.33}$ \\
+    RAAC
+      & $46.82$
+      & $77.33$
+      & $48.33$
+      & $65.00$ \\
+    MCA
+      & $54.66$
+      & $79.33$
+      & $54.85$
+      & $72.33$ \\
+    \bottomrule
+  \end{tabular}
+
+\end{table}
+
+\begin{table}[H]
+  \caption{Mean accuracy (\%) across three independent runs under the
+  \QwenModelName{} backbone.}
+  \label{tab:appendix-qwen-clean-raac-mca}
+  \centering
+  \footnotesize
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}lcccc@{}}
+    \toprule
+    Setting & MedMCQA & TruthfulQA & MMLU & SCALR \\
+    \midrule
+    Clean MAS
+      & $\mathbf{77.00}$
+      & $\mathbf{89.33}$
+      & $\mathbf{73.66}$
+      & $\mathbf{79.00}$ \\
+    RAAC
+      & $58.66$
+      & $79.33$
+      & $65.66$
+      & $73.00$ \\
+    MCA
+      & $61.19$
+      & $84.00$
+      & $68.66$
+      & $75.91$ \\
+    \bottomrule
+  \end{tabular}
+
+\end{table}
+
+\paragraph{Clean and adversarial MAS comparison.}
+Tables~\ref{tab:appendix-deepseek-clean-raac-mca}
+and~\ref{tab:appendix-qwen-clean-raac-mca} report results under the
+\DeepSeekModelName{} and \QwenModelName{} backbones, respectively. Each table
+compares the Clean MAS setting with the RAAC and MCA adversarial settings
+under the same question sets and evaluation rule. Clean MAS achieves the
+highest mean accuracy on all four datasets for both backbones. Both
+adversarial settings reduce accuracy, with the magnitude of the reduction
+varying across models and datasets.
+
+\paragraph{Attack comparison and dataset sensitivity.}
+RAAC yields lower accuracy than MCA for every backbone--dataset combination,
+indicating that strategy~13 causes a stronger degradation than the baseline-1
+attack. The effect is also dataset dependent. For \DeepSeekModelName{}, the
+largest Clean-to-RAAC drops occur on MMLU (23.33 points) and MedMCQA
+(22.84 points). For \QwenModelName{}, MedMCQA exhibits the largest reduction
+(18.34 points), while SCALR is comparatively more robust (6.00 points).
+These results suggest that both the backbone model and the reasoning domain
+affect adversarial susceptibility in multi-agent deliberation.

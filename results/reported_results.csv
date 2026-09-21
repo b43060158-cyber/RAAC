@@ -1,0 +1,26 @@
+model,condition,dataset,mean_accuracy_percent
+DeepSeekV4-Flash,Clean MAS,MedMCQA,69.66
+DeepSeekV4-Flash,Clean MAS,TruthfulQA,91.66
+DeepSeekV4-Flash,Clean MAS,MMLU,71.66
+DeepSeekV4-Flash,Clean MAS,SCALR,79.33
+DeepSeekV4-Flash,RAAC,MedMCQA,46.82
+DeepSeekV4-Flash,RAAC,TruthfulQA,77.33
+DeepSeekV4-Flash,RAAC,MMLU,48.33
+DeepSeekV4-Flash,RAAC,SCALR,65.00
+DeepSeekV4-Flash,MCA,MedMCQA,54.66
+DeepSeekV4-Flash,MCA,TruthfulQA,79.33
+DeepSeekV4-Flash,MCA,MMLU,54.85
+DeepSeekV4-Flash,MCA,SCALR,72.33
+Qwen3.5-Flash,Clean MAS,MedMCQA,77.00
+Qwen3.5-Flash,Clean MAS,TruthfulQA,89.33
+Qwen3.5-Flash,Clean MAS,MMLU,73.66
+Qwen3.5-Flash,Clean MAS,SCALR,79.00
+Qwen3.5-Flash,RAAC,MedMCQA,58.66
+Qwen3.5-Flash,RAAC,TruthfulQA,79.33
+Qwen3.5-Flash,RAAC,MMLU,65.66
+Qwen3.5-Flash,RAAC,SCALR,73.00
+Qwen3.5-Flash,MCA,MedMCQA,61.19
+Qwen3.5-Flash,MCA,TruthfulQA,84.00
+Qwen3.5-Flash,MCA,MMLU,68.66
+Qwen3.5-Flash,MCA,SCALR,75.91
+
