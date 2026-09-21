@@ -1,6 +1,6 @@
 # DAI 2026 Multi-Agent Reasoning Artifact
 
-This directory is the self-contained research artifact for an accepted [DAI 2026](https://www.adai.ai/dai/2026/index.html) paper on adversarial robustness in LLM-based multi-agent reasoning. It contains the experiment runtime, the four evaluation datasets used in the paper, the released reasoning bank, paper-aligned configuration, evaluation utilities, and unit tests.
+This repository accompanies our accepted [DAI 2026](https://www.adai.ai/dai/2026/index.html) paper on the security of discussion-based Large Language Model Multi-Agent Systems (LLM-MAS). We introduce Retrieval-Aided Adversarial Commentary Attack (RAAC), an adaptive attack in which a compromised agent exploits the evolving discussion state and prior successful persuasion cases to influence benign agents. RAAC combines a State-Aware Wrong-Cluster Targeting Strategy with references retrieved from the Adversarial Persuasion Corpus to generate targeted adversarial comments. Experiments across four downstream tasks and two LLM families show that RAAC consistently degrades LLM-MAS performance and produces larger accuracy reductions than the prompt-based MCA baseline, including a 32.79% relative accuracy reduction on MedMCQA compared with Clean MAS. These results reveal that legitimate peer-feedback channels can be exploited to progressively alter benign agents' answers and induce incorrect system-level decisions.
 
 The artifact supports three paper settings:
 
