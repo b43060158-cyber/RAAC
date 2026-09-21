@@ -108,18 +108,6 @@ python -m autogen_mas --config config/paper.yaml run-adversarial-dataset \
 
 To use a different model without editing the configuration, add `--llm-provider`, `--llm-model`, and, when needed, `--normal-agent-model` and `--adversarial-model`.
 
-## Reproducing the paper settings
-
-`config/paper.yaml` records the paper's four-agent topology, three rounds, temperatures, reasoning-bank retrieval settings, and evaluation datasets. The released RAAC configuration uses:
-
-- `situational_transfer_v1` scoring;
-- `mmr_diversity_v1` selection;
-- `top_k = 4`, `mmr_lambda = 0.7`, `min_score = 0.4`;
-- no cross-dataset retrieval;
-- normal-agent mitigation disabled for the main comparison.
-
-Model APIs can be nondeterministic even at fixed sampling seeds. The aggregate values reported in the paper are preserved in `results/reported_results.csv` and `docs/reported_results_appendix.tex` for comparison.
-
 ## Data
 
 The repository includes only the evaluation material required by the paper, not complete upstream training corpora. See [data/README.md](data/README.md) for file hashes, provenance, licenses, and citations. In summary:
